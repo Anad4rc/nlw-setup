@@ -1,0 +1,98 @@
+* { /*seletor, meio que tira os padroes de html e css definidos nas paginas do navegador*/
+margin: 0;
+padding: 0;
+box-sizing: border-box;/*como a caixa é medida, desconsidera os preenchimentos internos para sempre deixar a caixa do tamanho que eu defini*/
+
+}
+body {
+  background-color: #09090A;
+  color: white;
+  height: 100vh;
+}
+header {
+  display: flex; /*disposicao dos elementos dentro da caixa*/
+  align-items: center;
+  justify-content: space-between;/*vai pegar toda a largura do meu header vai justificar o conteudo colocando espaço entre os elementos border: 1px solid red;*/
+  padding: 48px;
+  position: fixed;/*fixa habits*/
+  width: 100%;
+}
+button {
+  padding: 16px 24px; /*em cima e embaixo 16px e 24 px nas laterais*/
+  border-radius: 8px; /*deixa a borda arredondada*/
+  border: 1px solid #8B5CF6;
+  background-color: transparent;
+  color: white;
+  display: flex;/*disposição dos elementos dentro de outro elemento- nesse caso flex flexivel*/
+  gap: 24px;/*espaço entre os elementos, so pode ser usado com o display flex*/
+  align-items: center;/*so funciona se o flex funcionar*/
+  font-family: 'Inter';
+  font-weight: 600;/*peso é a grossura da letra: fina, grossa*/
+font-size: 16px;
+line-height: 125%;/*altura da linha*/
+}
+
+#form-habits{
+  display: flex; 
+  padding: 182px 48px 48px; /*top 0 e 48px nas laterais*/ 
+  width: fit-content;/*encaixa o conteudo na largura*/
+}
+
+.habits {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.habit {
+  width: 64px;
+  height: 64px;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.days {
+display: flex;
+gap: 48px;/*espaaço entre as caixas*/
+margin-left: 32px;
+}
+
+.day {
+  display: flex;
+  flex-direction: column;
+  gap: 24px; /*espaço entre eles(as caixas)*/
+}
+
+.day div { /*engloba todas as divs*/
+margin-bottom: 8px; /*margin abaixo*/
+font-family: 'Roboto Mono';
+font-size: 20px;
+line-height: 125%;
+color: #a1a1aa;
+text-align: center;
+}
+
+input {
+  appearance: none;/*tem que colocar se nao nao vai mudar o arredondamento do input*/
+  -webkit-appearance: none;
+  width: 64px;
+  height: 64px;
+  border: 2 px solid #27272a;
+  border-radius: 8px;
+  background: #18181B;
+}
+/*pseudo-selector-quando tem dois pontinhos*/
+input:checked {
+  background: #8B5CF6;
+  border: 2px solid #A78BFA;
+}
+
+/*responsividade*/
+@media (max-width: 570px) { 
+  button div {
+display: none;
+  }
+}
